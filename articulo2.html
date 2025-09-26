@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Moderno: ES6+ y las Nuevas Características - DiccionarioCode</title>
+    <meta name="description" content="Explora las características más importantes de JavaScript ES6+ incluyendo arrow functions, destructuring, async/await y módulos. Mejora tu código con sintaxis moderna.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-blue-400">DiccionarioCode</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+                    <a href="blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="sobre-nosotros.html" class="text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-8">
+            <ol class="flex items-center space-x-2 text-gray-400">
+                <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-white">JavaScript Moderno: ES6+</span>
+                </li>
+            </ol>
+        </nav>
+
+        <article class="max-w-4xl mx-auto">
+            <!-- Article Header -->
+            <header class="mb-8">
+                <div class="mb-4">
+                    <span class="inline-block bg-yellow-900 text-yellow-200 px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                    JavaScript Moderno: ES6+ y las Nuevas Características
+                </h1>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <time datetime="2024-01-10">10 de enero, 2024</time>
+                    <span class="mx-3">•</span>
+                    <span>Por María González</span>
+                    <span class="mx-3">•</span>
+                    <span>8 min de lectura</span>
+                </div>
+            </header>
+
+            <!-- Article Content -->
+            <div class="content prose prose-lg prose-invert max-w-none">
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    JavaScript ha evolucionado enormemente desde ES6 (2015). Las nuevas características han transformado la forma en que escribimos código, haciéndolo más limpio, legible y eficiente.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Arrow Functions</h2>
+                
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Las arrow functions proporcionan una sintaxis más concisa para escribir funciones y manejan el contexto `this` de manera diferente:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>// Función tradicional
+function suma(a, b) {
+    return a + b;
+}
+
+// Arrow function
+const suma = (a, b) => a + b;
+
+// Con un solo parámetro
+const doble = x => x * 2;
+
+// Sin parámetros
+const saludo = () => "¡Hola mundo!";</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Destructuring</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    El destructuring permite extraer valores de arrays u objetos de forma elegante:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>// Destructuring de objetos
+const usuario = { nombre: 'Ana', edad: 25, ciudad: 'Madrid' };
+const { nombre, edad } = usuario;
+
+// Destructuring de arrays
+const colores = ['rojo', 'verde', 'azul'];
+const [primero, segundo] = colores;
+
+// Con valores por defecto
+const { altura = 170 } = usuario;</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Template Literals</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Los template literals facilitan la interpolación de strings y permiten strings multilínea:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>const nombre = 'Carlos';
+const edad = 30;
+
+// Template literal
+const mensaje = `Hola, soy ${nombre} y tengo ${edad} años.`;
+
+// Multilínea
+const html = `
+    &lt;div&gt;
+        &lt;h1&gt;${nombre}&lt;/h1&gt;
+        &lt;p&gt;Edad: ${edad}&lt;/p&gt;
+    &lt;/div&gt;
+`;</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Async/Await</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Async/await hace que el código asíncrono sea más fácil de leer y escribir:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>// Con Promises
+function obtenerDatos() {
+    return fetch('/api/datos')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+}
+
+// Con async/await
+async function obtenerDatos() {
+    try {
+        const response = await fetch('/api/datos');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Módulos ES6</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Los módulos permiten organizar el código en archivos separados:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>// math.js
+export const PI = 3.14159;
+export function suma(a, b) {
+    return a + b;
+}
+export default function multiplicar(a, b) {
+    return a * b;
+}
+
+// main.js
+import multiplicar, { PI, suma } from './math.js';
+// o
+import * as math from './math.js';</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Spread Operator</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    El operador spread (...) permite expandir elementos de arrays u objetos:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>// Con arrays
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combinado = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]
+
+// Con objetos
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+const combinado = { ...obj1, ...obj2 }; // { a: 1, b: 2, c: 3, d: 4 }
+
+// Copiar arrays/objetos
+const copia = [...original];
+const copiaObj = { ...original };</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Nuevos Métodos de Array</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    ES6+ introdujo varios métodos útiles para trabajar con arrays:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>const numeros = [1, 2, 3, 4, 5];
+
+// find() - encuentra el primer elemento que cumple la condición
+const mayor3 = numeros.find(n => n > 3); // 4
+
+// includes() - verifica si un elemento existe
+const tieneEl3 = numeros.includes(3); // true
+
+// flatMap() - mapea y aplana en una operación
+const duplicados = numeros.flatMap(n => [n, n * 2]);
+// [1, 2, 2, 4, 3, 6, 4, 8, 5, 10]</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Conclusión</h2>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Las características modernas de JavaScript han revolucionado el desarrollo web. Adoptar estas nuevas sintaxis y funcionalidades te permitirá escribir código más limpio, mantenible y eficiente.
+                </p>
+
+                <p class="text-gray-300 mb-8 leading-relaxed">
+                    No es necesario aprender todo de una vez. Comienza incorporando una característica a la vez en tu código diario y gradualmente irás dominando JavaScript moderno.
+                </p>
+            </div>
+        </article>
+
+        <!-- Navigation -->
+        <nav class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-700">
+            <div class="flex justify-between items-center">
+                <a href="articulo1.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Artículo Anterior
+                </a>
+                <a href="articulo3.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    Siguiente Artículo
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2024 DiccionarioCode. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Glosario</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

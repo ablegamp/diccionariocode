@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiccionarioCode - Glosario de Programación</title>
+    <meta name="description" content="Diccionario completo de términos de programación y desarrollo web. Encuentra definiciones claras y precisas de conceptos técnicos.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .term-card {
+            transition: all 0.3s ease;
+        }
+        .term-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        .search-input {
+            transition: all 0.3s ease;
+        }
+        .search-input:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .no-results {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-blue-400">DiccionarioCode</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-blue-400 hover:text-blue-300 font-medium transition-colors">Inicio</a>
+                    <a href="blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="sobre-nosotros.html" class="text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Search Section -->
+        <section class="mb-12">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold mb-4 text-white">Glosario de Programación</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Encuentra definiciones claras y precisas de los términos más importantes en programación y desarrollo web.
+                </p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Buscar término..."
+                        class="search-input w-full px-6 py-4 bg-gray-800 text-white rounded-xl border border-gray-700 focus:outline-none focus:border-blue-500 text-lg"
+                    >
+                    <div class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section>
+            <div id="resultsContainer" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Los términos se cargarán aquí dinámicamente -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results hidden text-center py-16">
+                <div class="text-gray-500 text-6xl mb-4">🔍</div>
+                <h3 class="text-2xl font-semibold text-gray-400 mb-2">No se encontraron resultados</h3>
+                <p class="text-gray-500">Intenta con otro término de búsqueda</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2024 DiccionarioCode. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

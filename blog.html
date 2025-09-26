@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DiccionarioCode</title>
+    <meta name="description" content="Artículos sobre programación, desarrollo web y tecnología. Tutoriales, tips y las últimas tendencias en el mundo del desarrollo.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .article-card {
+            transition: all 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.3);
+        }
+        .read-more-btn {
+            transition: all 0.3s ease;
+        }
+        .read-more-btn:hover {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-blue-400">DiccionarioCode</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+                    <a href="blog.html" class="text-blue-400 hover:text-blue-300 font-medium transition-colors">Blog</a>
+                    <a href="sobre-nosotros.html" class="text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Blog Header -->
+        <section class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4 text-white">Blog de Programación</h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                Artículos, tutoriales y las últimas tendencias en desarrollo web y programación.
+            </p>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+            <!-- Artículo 1 -->
+            <article class="article-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-3">
+                        <time datetime="2024-01-15">15 de enero, 2024</time>
+                        <span class="mx-2">•</span>
+                        <span>Por Juan Pérez</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-white mb-3 leading-tight">
+                        Introducción a las APIs REST: Fundamentos y Mejores Prácticas
+                    </h3>
+                    
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Descubre qué son las APIs REST, cómo funcionan y las mejores prácticas para diseñar APIs robustas y escalables. Una guía completa para principiantes y desarrolladores intermedios.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="inline-block bg-blue-900 text-blue-200 px-3 py-1 rounded-full text-sm">API</span>
+                        <a href="articulo1.html" class="read-more-btn text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            Leer más 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article class="article-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-3">
+                        <time datetime="2024-01-10">10 de enero, 2024</time>
+                        <span class="mx-2">•</span>
+                        <span>Por María González</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-white mb-3 leading-tight">
+                        JavaScript Moderno: ES6+ y las Nuevas Características
+                    </h3>
+                    
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Explora las características más importantes de JavaScript ES6+ incluyendo arrow functions, destructuring, async/await y módulos. Mejora tu código con sintaxis moderna.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="inline-block bg-yellow-900 text-yellow-200 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <a href="articulo2.html" class="read-more-btn text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            Leer más 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article class="article-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-3">
+                        <time datetime="2024-01-05">5 de enero, 2024</time>
+                        <span class="mx-2">•</span>
+                        <span>Por Carlos Ruiz</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-white mb-3 leading-tight">
+                        CSS Grid vs Flexbox: Cuándo Usar Cada Uno
+                    </h3>
+                    
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Aprende las diferencias entre CSS Grid y Flexbox, cuándo usar cada uno y cómo pueden trabajar juntos para crear layouts modernos y responsivos.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="inline-block bg-purple-900 text-purple-200 px-3 py-1 rounded-full text-sm">CSS</span>
+                        <a href="articulo3.html" class="read-more-btn text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            Leer más 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artículo 4 -->
+            <article class="article-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-3">
+                        <time datetime="2023-12-28">28 de diciembre, 2023</time>
+                        <span class="mx-2">•</span>
+                        <span>Por Ana Martín</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-white mb-3 leading-tight">
+                        Git y GitHub: Guía Completa para Principiantes
+                    </h3>
+                    
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Domina Git desde cero: aprende los comandos esenciales, flujos de trabajo y cómo colaborar efectivamente usando GitHub en proyectos de desarrollo.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="inline-block bg-green-900 text-green-200 px-3 py-1 rounded-full text-sm">Git</span>
+                        <a href="articulo4.html" class="read-more-btn text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            Leer más 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artículo 5 -->
+            <article class="article-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-3">
+                        <time datetime="2023-12-20">20 de diciembre, 2023</time>
+                        <span class="mx-2">•</span>
+                        <span>Por David López</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-white mb-3 leading-tight">
+                        Responsive Design: Técnicas Avanzadas con CSS
+                    </h3>
+                    
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Descubre técnicas avanzadas de responsive design, desde media queries hasta container queries y las mejores prácticas para crear sitios web adaptativos.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="inline-block bg-pink-900 text-pink-200 px-3 py-1 rounded-full text-sm">Responsive</span>
+                        <a href="articulo5.html" class="read-more-btn text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            Leer más 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artículo 6 -->
+            <article class="article-card bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-gray-400 mb-3">
+                        <time datetime="2023-12-15">15 de diciembre, 2023</time>
+                        <span class="mx-2">•</span>
+                        <span>Por Laura Fernández</span>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-white mb-3 leading-tight">
+                        Optimización de Performance en Aplicaciones Web
+                    </h3>
+                    
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Aprende técnicas de optimización para mejorar el rendimiento de tus aplicaciones web: lazy loading, code splitting, compresión y métricas de performance.
+                    </p>
+                    
+                    <div class="flex items-center justify-between">
+                        <span class="inline-block bg-red-900 text-red-200 px-3 py-1 rounded-full text-sm">Performance</span>
+                        <a href="articulo6.html" class="read-more-btn text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                            Leer más 
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2024 DiccionarioCode. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Glosario</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

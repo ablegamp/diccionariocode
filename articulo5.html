@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design: Técnicas Avanzadas con CSS - DiccionarioCode</title>
+    <meta name="description" content="Descubre técnicas avanzadas de responsive design, desde media queries hasta container queries y las mejores prácticas para crear sitios web adaptativos.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-blue-400">DiccionarioCode</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+                    <a href="blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="sobre-nosotros.html" class="text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <nav class="mb-8">
+            <ol class="flex items-center space-x-2 text-gray-400">
+                <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-white">Responsive Design Avanzado</span>
+                </li>
+            </ol>
+        </nav>
+
+        <article class="max-w-4xl mx-auto">
+            <header class="mb-8">
+                <div class="mb-4">
+                    <span class="inline-block bg-pink-900 text-pink-200 px-3 py-1 rounded-full text-sm font-medium">Responsive</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                    Responsive Design: Técnicas Avanzadas con CSS
+                </h1>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <time datetime="2023-12-20">20 de diciembre, 2023</time>
+                    <span class="mx-3">•</span>
+                    <span>Por David López</span>
+                    <span class="mx-3">•</span>
+                    <span>9 min de lectura</span>
+                </div>
+            </header>
+
+            <div class="content prose prose-lg prose-invert max-w-none">
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    El responsive design ha evolucionado mucho desde los primeros media queries. Descubre técnicas avanzadas para crear experiencias verdaderamente adaptativas.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Media Queries Avanzadas</h2>
+                
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Además de width y height, podemos usar características avanzadas:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>/* Orientación del dispositivo */
+@media (orientation: landscape) {
+    .sidebar { display: block; }
+}
+
+/* Densidad de pixeles */
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .logo { background-image: url('logo-2x.png'); }
+}
+
+/* Preferencias de usuario */
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+}
+
+/* Tema oscuro/claro */
+@media (prefers-color-scheme: dark) {
+    :root { --bg-color: #1a1a1a; }
+}</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Container Queries</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Las container queries permiten que los componentes respondan a su contenedor, no solo al viewport:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>.card-container {
+    container-type: inline-size;
+}
+
+@container (min-width: 400px) {
+    .card {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .card-image {
+        flex: 0 0 150px;
+    }
+}</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Unidades Responsivas</h2>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-white mb-3">Viewport Units</h3>
+                        <ul class="text-gray-300 text-sm space-y-1">
+                            <li><code>vw, vh</code> - Viewport width/height</li>
+                            <li><code>vmin, vmax</code> - Menor/mayor dimensión</li>
+                            <li><code>svw, lvw, dvw</code> - Small/Large/Dynamic</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-white mb-3">Container Units</h3>
+                        <ul class="text-gray-300 text-sm space-y-1">
+                            <li><code>cqw, cqh</code> - Container width/height</li>
+                            <li><code>cqi, cqb</code> - Inline/Block size</li>
+                            <li><code>cqmin, cqmax</code> - Menor/mayor</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Clamp() para Tipografía Fluida</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    La función clamp() permite crear tipografía que escala suavemente:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>/* Tipografía fluida */
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+/* Espaciado fluido */
+.container {
+    padding: clamp(1rem, 5%, 3rem);
+    gap: clamp(0.5rem, 2vw, 2rem);
+}</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Gríd Responsiva con CSS Grid</h2>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>/* Grid auto-fit responsivo */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Grid con áreas nombradas */
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+}</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Optimización de Imágenes Responsivas</h2>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>&lt;picture&gt;
+    &lt;source media="(min-width: 800px)" srcset="hero-large.webp"&gt;
+    &lt;source media="(min-width: 400px)" srcset="hero-medium.webp"&gt;
+    &lt;img src="hero-small.webp" alt="Hero image" 
+         loading="lazy" decoding="async"&gt;
+&lt;/picture&gt;</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Mejores Prácticas</h2>
+
+                <ul class="list-disc list-inside text-gray-300 mb-8 space-y-2">
+                    <li>Diseña mobile-first siempre</li>
+                    <li>Usa unidades relativas (rem, em, %)</li>
+                    <li>Optimiza imágenes para diferentes dispositivos</li>
+                    <li>Prueba en dispositivos reales, no solo simuladores</li>
+                    <li>Considera la accesibilidad en todos los tamaños</li>
+                </ul>
+
+                <p class="text-gray-300 mb-8 leading-relaxed">
+                    El responsive design moderno va más allá de media queries básicas. Con estas técnicas avanzadas podrás crear experiencias verdaderamente adaptativas que funcionen perfectamente en cualquier dispositivo.
+                </p>
+            </div>
+        </article>
+
+        <nav class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-700">
+            <div class="flex justify-between items-center">
+                <a href="articulo4.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Artículo Anterior
+                </a>
+                <a href="articulo6.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    Siguiente Artículo
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2024 DiccionarioCode. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Glosario</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

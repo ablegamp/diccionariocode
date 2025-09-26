@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git y GitHub: Guía Completa para Principiantes - DiccionarioCode</title>
+    <meta name="description" content="Domina Git desde cero: aprende los comandos esenciales, flujos de trabajo y cómo colaborar efectivamente usando GitHub en proyectos de desarrollo.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-blue-400">DiccionarioCode</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+                    <a href="blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="sobre-nosotros.html" class="text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <nav class="mb-8">
+            <ol class="flex items-center space-x-2 text-gray-400">
+                <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-white">Git y GitHub: Guía Completa</span>
+                </li>
+            </ol>
+        </nav>
+
+        <article class="max-w-4xl mx-auto">
+            <header class="mb-8">
+                <div class="mb-4">
+                    <span class="inline-block bg-green-900 text-green-200 px-3 py-1 rounded-full text-sm font-medium">Git</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                    Git y GitHub: Guía Completa para Principiantes
+                </h1>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <time datetime="2023-12-28">28 de diciembre, 2023</time>
+                    <span class="mx-3">•</span>
+                    <span>Por Ana Martín</span>
+                    <span class="mx-3">•</span>
+                    <span>12 min de lectura</span>
+                </div>
+            </header>
+
+            <div class="content prose prose-lg prose-invert max-w-none">
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Git es el sistema de control de versiones más popular del mundo. En esta guía aprenderás desde los conceptos básicos hasta técnicas avanzadas para colaborar efectivamente en proyectos.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">¿Qué es Git?</h2>
+                
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Git es un sistema de control de versiones distribuido que permite rastrear cambios en archivos y coordinar el trabajo entre múltiples desarrolladores. Cada desarrollador tiene una copia completa del historial del proyecto.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Comandos Esenciales</h2>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code># Inicializar un repositorio
+git init
+
+# Clonar un repositorio
+git clone https://github.com/usuario/repo.git
+
+# Agregar cambios al staging area
+git add .
+git add archivo.js
+
+# Hacer un commit
+git commit -m "Mensaje descriptivo"
+
+# Ver el estado del repositorio
+git status
+
+# Ver el historial de commits
+git log</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Trabajar con Ramas</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Las ramas permiten desarrollar características de forma aislada sin afectar el código principal:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code># Crear y cambiar a una nueva rama
+git checkout -b nueva-caracteristica
+
+# Cambiar entre ramas
+git checkout main
+git checkout nueva-caracteristica
+
+# Fusionar ramas
+git checkout main
+git merge nueva-caracteristica
+
+# Eliminar rama
+git branch -d nueva-caracteristica</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">GitHub: Colaboración en la Nube</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    GitHub es una plataforma que aloja repositorios Git y facilita la colaboración:
+                </p>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code># Conectar repositorio local con GitHub
+git remote add origin https://github.com/usuario/repo.git
+
+# Subir cambios a GitHub
+git push origin main
+
+# Bajar cambios de GitHub
+git pull origin main
+
+# Ver repositorios remotos
+git remote -v</code></pre>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Flujo de Trabajo Recomendado</h2>
+
+                <ol class="list-decimal list-inside text-gray-300 mb-6 space-y-2">
+                    <li>Crea una rama para cada nueva característica</li>
+                    <li>Haz commits frecuentes con mensajes descriptivos</li>
+                    <li>Sube tu rama a GitHub</li>
+                    <li>Abre un Pull Request para revisión</li>
+                    <li>Fusiona después de la aprobación</li>
+                    <li>Elimina la rama después del merge</li>
+                </ol>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Consejos y Mejores Prácticas</h2>
+
+                <div class="grid gap-4 mb-8">
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-4">
+                        <h4 class="font-semibold text-white mb-2">Commits Atómicos</h4>
+                        <p class="text-gray-300 text-sm">Cada commit debe representar un cambio lógico único.</p>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-4">
+                        <h4 class="font-semibold text-white mb-2">Mensajes Descriptivos</h4>
+                        <p class="text-gray-300 text-sm">Usa mensajes que expliquen qué y por qué cambió algo.</p>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-4">
+                        <h4 class="font-semibold text-white mb-2">Pull Requests</h4>
+                        <p class="text-gray-300 text-sm">Siempre usa PRs para revisar código antes del merge.</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 mb-8 leading-relaxed">
+                    Dominar Git y GitHub es esencial para cualquier desarrollador moderno. Con práctica, estos comandos se volverán segunda naturaleza y mejorarán significativamente tu flujo de trabajo.
+                </p>
+            </div>
+        </article>
+
+        <nav class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-700">
+            <div class="flex justify-between items-center">
+                <a href="articulo3.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Artículo Anterior
+                </a>
+                <a href="articulo5.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    Siguiente Artículo
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2024 DiccionarioCode. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Glosario</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

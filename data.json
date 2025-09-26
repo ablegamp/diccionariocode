@@ -1,0 +1,79 @@
+{
+  "terminos": [
+    {
+      "id": "api",
+      "termino": "API",
+      "definicion": "Application Programming Interface (Interfaz de Programación de Aplicaciones). Conjunto de reglas y especificaciones que las aplicaciones pueden seguir para comunicarse entre ellas."
+    },
+    {
+      "id": "backend",
+      "termino": "Backend",
+      "definicion": "Parte del desarrollo web que se encarga del lado del servidor, bases de datos, aplicaciones y todo lo que el usuario no ve directamente."
+    },
+    {
+      "id": "algoritmo",
+      "termino": "Algoritmo",
+      "definicion": "Conjunto de instrucciones o reglas definidas y no-ambiguas, ordenadas y finitas que permite, típicamente, solucionar un problema."
+    },
+    {
+      "id": "frontend",
+      "termino": "Frontend",
+      "definicion": "Parte del desarrollo web que se encarga de la interfaz de usuario y la experiencia del usuario (UI/UX), todo lo que el usuario ve e interactúa."
+    },
+    {
+      "id": "framework",
+      "termino": "Framework",
+      "definicion": "Marco de trabajo que proporciona una estructura y un conjunto de herramientas para desarrollar aplicaciones de software de manera más eficiente."
+    },
+    {
+      "id": "javascript",
+      "termino": "JavaScript",
+      "definicion": "Lenguaje de programación interpretado, dialecto del estándar ECMAScript. Es orientado a objetos y se usa principalmente para crear páginas web dinámicas."
+    },
+    {
+      "id": "css",
+      "termino": "CSS",
+      "definicion": "Cascading Style Sheets (Hojas de Estilo en Cascada). Lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado en HTML."
+    },
+    {
+      "id": "html",
+      "termino": "HTML",
+      "definicion": "HyperText Markup Language (Lenguaje de Marcado de Hipertexto). Lenguaje de marcado estándar para crear páginas web y aplicaciones web."
+    },
+    {
+      "id": "variable",
+      "termino": "Variable",
+      "definicion": "Espacio de almacenamiento asociado con un nombre simbólico que contiene datos, conocidos como el valor de la variable."
+    },
+    {
+      "id": "funcion",
+      "termino": "Función",
+      "definicion": "Bloque de código que realiza una tarea específica. Puede recibir parámetros de entrada y puede devolver un valor como resultado."
+    },
+    {
+      "id": "array",
+      "termino": "Array",
+      "definicion": "Estructura de datos que consiste en una colección de elementos (valores o variables), cada uno identificado por al menos un índice de array."
+    },
+    {
+      "id": "objeto",
+      "termino": "Objeto",
+      "definicion": "Estructura de datos que contiene propiedades (atributos) y métodos (funciones). Es una instancia de una clase en programación orientada a objetos."
+    },
+    {
+      "id": "json",
+      "termino": "JSON",
+      "definicion": "JavaScript Object Notation. Formato ligero de intercambio de datos basado en texto y que es fácil de leer y escribir para humanos y máquinas."
+    },
+    {
+      "id": "git",
+      "termino": "Git",
+      "definicion": "Sistema de control de versiones distribuido que permite rastrear cambios en archivos y coordinar el trabajo entre múltiples desarrolladores."
+    },
+    {
+      "id": "responsive",
+      "termino": "Responsive Design",
+      "definicion": "Enfoque de diseño web que hace que las páginas web se rendericen bien en diferentes dispositivos y tamaños de ventana."
+    }
+  ]
+}

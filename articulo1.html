@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a las APIs REST: Fundamentos y Mejores Prácticas - DiccionarioCode</title>
+    <meta name="description" content="Descubre qué son las APIs REST, cómo funcionan y las mejores prácticas para diseñar APIs robustas y escalables. Una guía completa para principiantes y desarrolladores intermedios.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .content h2 {
+            scroll-margin-top: 2rem;
+        }
+        .content h3 {
+            scroll-margin-top: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-2xl font-bold text-blue-400">DiccionarioCode</h1>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Inicio</a>
+                    <a href="blog.html" class="text-gray-300 hover:text-white transition-colors">Blog</a>
+                    <a href="sobre-nosotros.html" class="text-gray-300 hover:text-white transition-colors">Sobre nosotros</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Breadcrumb -->
+        <nav class="mb-8">
+            <ol class="flex items-center space-x-2 text-gray-400">
+                <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-white">Introducción a las APIs REST</span>
+                </li>
+            </ol>
+        </nav>
+
+        <article class="max-w-4xl mx-auto">
+            <!-- Article Header -->
+            <header class="mb-8">
+                <div class="mb-4">
+                    <span class="inline-block bg-blue-900 text-blue-200 px-3 py-1 rounded-full text-sm font-medium">API</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                    Introducción a las APIs REST: Fundamentos y Mejores Prácticas
+                </h1>
+                <div class="flex items-center text-gray-400 text-sm">
+                    <time datetime="2024-01-15">15 de enero, 2024</time>
+                    <span class="mx-3">•</span>
+                    <span>Por Juan Pérez</span>
+                    <span class="mx-3">•</span>
+                    <span>10 min de lectura</span>
+                </div>
+            </header>
+
+            <!-- Article Content -->
+            <div class="content prose prose-lg prose-invert max-w-none">
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Las APIs REST se han convertido en el estándar de facto para la comunicación entre aplicaciones modernas. En este artículo, exploraremos sus fundamentos y las mejores prácticas para crear APIs robustas y escalables.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">¿Qué es una API REST?</h2>
+                
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    REST (Representational State Transfer) es un estilo arquitectónico para sistemas distribuidos, especialmente servicios web. Una API REST es una interfaz que permite a diferentes aplicaciones comunicarse utilizando los principios REST.
+                </p>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Las APIs REST utilizan métodos HTTP estándar (GET, POST, PUT, DELETE) para realizar operaciones sobre recursos identificados por URLs. Esto las hace intuitivas y fáciles de usar para desarrolladores.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Principios Fundamentales de REST</h2>
+
+                <h3 class="text-2xl font-semibold text-white mb-4 mt-8">1. Arquitectura Cliente-Servidor</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    La separación entre cliente y servidor permite que ambos evolucionen independientemente. El cliente se encarga de la interfaz de usuario, mientras que el servidor gestiona los datos y la lógica de negocio.
+                </p>
+
+                <h3 class="text-2xl font-semibold text-white mb-4 mt-8">2. Sin Estado (Stateless)</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Cada petición debe contener toda la información necesaria para ser procesada. El servidor no debe almacenar información sobre el estado del cliente entre peticiones.
+                </p>
+
+                <h3 class="text-2xl font-semibold text-white mb-4 mt-8">3. Cacheable</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Las respuestas deben indicar si pueden ser cacheadas o no, mejorando la eficiencia y escalabilidad del sistema.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Métodos HTTP y su Uso</h2>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <ul class="space-y-4 text-gray-300">
+                        <li><strong class="text-white">GET:</strong> Obtener recursos del servidor</li>
+                        <li><strong class="text-white">POST:</strong> Crear nuevos recursos</li>
+                        <li><strong class="text-white">PUT:</strong> Actualizar recursos completos</li>
+                        <li><strong class="text-white">PATCH:</strong> Actualizar recursos parcialmente</li>
+                        <li><strong class="text-white">DELETE:</strong> Eliminar recursos</li>
+                    </ul>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Códigos de Estado HTTP</h2>
+
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Los códigos de estado HTTP proporcionan información sobre el resultado de una petición:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-white mb-3">Éxito (2xx)</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>200 - OK</li>
+                            <li>201 - Creado</li>
+                            <li>204 - Sin contenido</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
+                        <h4 class="text-lg font-semibold text-white mb-3">Error (4xx/5xx)</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>400 - Petición incorrecta</li>
+                            <li>404 - No encontrado</li>
+                            <li>500 - Error del servidor</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Mejores Prácticas</h2>
+
+                <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Diseño de URLs</h3>
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>
+# Buenas prácticas
+GET /api/users          # Obtener lista de usuarios
+GET /api/users/123      # Obtener usuario específico
+POST /api/users         # Crear nuevo usuario
+PUT /api/users/123      # Actualizar usuario
+DELETE /api/users/123   # Eliminar usuario
+                    </code></pre>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Versionado</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Incluye versiones en tus APIs para mantener compatibilidad hacia atrás:
+                </p>
+                <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+                    <pre class="text-gray-300 text-sm"><code>/api/v1/users</code></pre>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-white mb-4 mt-8">Autenticación y Seguridad</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Implementa autenticación robusta usando JWT tokens, OAuth2 o API keys. Siempre usa HTTPS en producción y valida todas las entradas.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Conclusión</h2>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    Las APIs REST ofrecen una forma elegante y estándar de crear servicios web escalables. Siguiendo estos principios y mejores prácticas, podrás diseñar APIs que sean fáciles de usar, mantener y escalar.
+                </p>
+
+                <p class="text-gray-300 mb-8 leading-relaxed">
+                    Recuerda que el diseño de una buena API es un proceso iterativo. Escucha a tus usuarios, monitorea el uso y mejora continuamente basándote en datos reales.
+                </p>
+            </div>
+        </article>
+
+        <!-- Navigation -->
+        <nav class="max-w-4xl mx-auto mt-16 pt-8 border-t border-gray-700">
+            <div class="flex justify-between items-center">
+                <a href="blog.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    Volver al Blog
+                </a>
+                <a href="articulo2.html" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                    Siguiente Artículo
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2024 DiccionarioCode. Todos los derechos reservados.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a>
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Glosario</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
