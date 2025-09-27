@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 // Función para cargar términos desde el JSON
 async function cargarTerminos() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('../data/data.json');
         const data = await response.json();
         terminos = data.terminos;
         terminosFiltrados = [...terminos];
